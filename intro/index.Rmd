@@ -1,0 +1,105 @@
+---
+title: "Introduction and semester projects"
+author: GEOG 40323
+date: January 16, 2018
+output: 
+  revealjs::revealjs_presentation: 
+    theme: "black"
+    transition: "none"
+    center: TRUE
+    fig_caption: TRUE
+    
+---
+
+## Introductions
+
+Share with your colleagues: 
+
+* Why are you interested in GIS?  
+* What do you hope to accomplish in this course?  
+
+---
+
+## Course goals
+
+---
+
+## Syllabus
+
+---
+
+## Semester projects
+
+---
+
+## Semester projects
+
+* This semester, you'll be working with one of five different Fort Worth-area organizations to assist them with GIS tasks
+* You'll be assigned one of these groups by next week and will complete a semester-long individual project for your client
+
+---
+
+## Fort Worth Bike Sharing
+
+<img src="http://www.fwlocals.com/wp-content/uploads/2015/11/tumblr_nkvfm581cU1u3uq6lo4_1280.jpg" style="width: 650px"><figcaption>Source: fwlocals.com</figcaption>
+
+---
+
+## Fort Worth Solid Waste
+
+<img src="http://www.the109.org/wp-content/uploads/2016/12/IMG_1043.jpg" style="width: 650px"><figcaption>Source: [the109.org](http://www.the109.org/2016/12/07/fort-worth-code-compliance-aims-to-increase-recycling/)</figcaption>
+
+---
+
+## Tarrant County Homeless Coalition
+
+<img src="http://www.the109.org/wp-content/uploads/2016/01/Tarrant-County-Homeless-Coalition.jpg" style="width: 700px"><figcaption>Source: [the109.org](http://www.the109.org/2016/01/25/volunteers-combat-homelessness-in-tarrant-parker-counties/)</figcaption>
+
+---
+
+## Tarrant Area Food Bank
+
+<img src="http://northtexascf.org/wp-content/uploads/2015/12/Tarrant-Area-Food-Bank-Mobile-Pantry.jpg" style="width: 650px"><figcaption>Source: [North Texas Community Foundation](https://northtexascf.org/tarrant-area-food-bank/)</figcaption>
+
+
+---
+
+## Tarrant Transit Alliance
+
+<img src="https://tarranttransitalliance12.wildapricot.org/resources/Pictures/HOMEPAGE/Home%20Page%20about%20photos/1.jpg" style="width: 700px"><figcaption>Source: TTA</figcaption>
+
+---
+
+## Semester project timeline
+
+* This week: submit to me your group choices in ranked order
+* Weeks 2-3: project "wishlist" delivered to you
+* February 25: project "pitch" due to me and your clients
+* Weeks 13-14: open project work
+* May 7: final report due
+* May 8: poster presentation session
+
+---
+
+## ArcGIS Pro
+
+* This semester, we will be using __ArcGIS Pro__ to complete our desktop GIS labs
+* Review and catch-up
+
+
+
+
+
+
+
+
+<style>
+
+.reveal section img {
+  background:none; 
+  border:none; 
+  box-shadow:none;
+  }
+  
+</style>
+
