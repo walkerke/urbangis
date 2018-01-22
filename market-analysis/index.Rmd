@@ -1,0 +1,109 @@
+---
+title: "Market analysis and segmentation"
+author: GEOG 40323
+date: January 23, 2018
+output: 
+  revealjs::revealjs_presentation: 
+    theme: "black"
+    transition: "none"
+    center: TRUE
+    fig_caption: TRUE
+    highlight: "zenburn"
+    
+---
+
+## Business analytics
+
+<img src=business-analytics.png style="width: 800px">
+
+---
+
+### Doing business geographically
+
+* Let's say you want to open a new franchise for your company.  What do you need to know?  
+* Brainstorm!
+
+---
+
+### Doing business geographically
+
+* Activities (among others) might include: 
+    * Geodemographic segmentation
+    * Trade area analysis
+    * Analysis of competitors' locations
+    
+---
+
+### Geodemographic segmentation
+
+* The partitioning of geographic units (e.g. households, counties) into groups based on common characteristics, then "naming" those groups
+* Examples: [Esri Tapestry segmentation](http://www.arcgis.com/home/item.html?id=a7d9f22e1c39413883f60b44392e42d1); [CDRC segmentation (UK)](http://maps.cdrc.ac.uk/#/geodemographics/toac/toac11/BTTTFTT/10/-0.1497/51.4951/)
+
+---
+
+### How segmentation works
+
+* Most common method for geodemographic segmentation: _k-means clustering_
+* Goal: to partition individual units into _k_ groups based on attribute similarity
+
+---
+
+### How k-means clustering works
+
+* _k_ cluster "centers" are chosen for a given distribution of data (either _a priori_ by the analyst or at random)
+* Points are assigned to a cluster based on proximity in data space
+* Cluster centers are then re-calculated, and points re-assigned based on proximity to the new centers
+* The algorithm "converges" when data points stop switching clusters
+* Graphical illustration: http://www.naftaliharris.com/blog/visualizing-k-means-clustering/
+
+---
+
+### K-means clustering in ArcGIS
+
+* Available via the "Grouping Analysis" tool in the Spatial Statistics toolbox
+* Let's try it out!
+
+---
+
+## Trade area analysis
+
+* Analysis of characteristics of area from which a business generates a majority of its customers
+* Trade areas can be defined by: 
+    * Euclidean or network distance
+    * Customer geography
+    * Gravity modeling
+    * Common sense
+    
+---
+
+### Business Analyst
+
+* Business Analyst for Desktop: comprehensive add-on to ArcGIS with detailed demographic & business data along with modeling functionality
+    * __Expensive!__
+* Business Analyst Online: Web-based interface to Business Analyst; less functionality than BA Desktop but very intuitive
+* Let's try it out! https://bao.arcgis.com/esriBAO/login/
+
+---
+
+## Trade area analysis in BAO
+
+---
+
+## Competitor location analysis in BAO
+
+
+
+
+
+
+
+<style>
+
+.reveal section img {
+  background:none; 
+  border:none; 
+  box-shadow:none;
+  }
+  
+</style>
+
