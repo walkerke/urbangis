@@ -1,0 +1,206 @@
+---
+title: "Spatial databases and SQL"
+author: GEOG 40323
+date: January 30, 2018
+output: 
+  revealjs::revealjs_presentation: 
+    theme: "black"
+    transition: "none"
+    center: TRUE
+    fig_caption: TRUE
+    highlight: "zenburn"
+    
+---
+
+## Flat files
+
+* Rows of information stored as text or binary files
+* Examples: comma-delimited (CSV) files, spreadsheets
+
+---
+
+## Databases and DBMS
+
+* **Database**: an organized collection of data
+* **Database Management System (DBMS)**: computer program that allows you to store and manipulate your data
+
+* Example DBMS: PostgreSQL/PostGIS
+
+---
+
+## The relational model
+
+* Tables (representation of *relations*) can be associated with one another based on common fields
+
+<img src=img/relation.png style="width: 700px" />
+
+---
+
+## Structure of a database
+
+* **Schema**: structural description of relations (tables) in a database
+* **Instance**: specific contents at a given point in time
+* **Key**: attribute whose value is unique for each record (or which can be combined with another attribute to make a unique value)
+ * Used to establish relationships between tables
+
+
+---
+
+### Structure of a database (GIS)
+
+<img src=img/tablegis.png style="width: 800px" />
+
+---
+
+## CARTO
+
+* Web-based platform for data management and visualization; uses PostGIS as a backend
+* Free trials available and free accounts for students:  https://carto.com/get-started/
+
+---
+
+### Today's data
+
+* Our data for today: traffic accidents in Fort Worth over the past month
+* Data available on TCU Online
+
+---
+
+### Brief tour of CARTO
+
+* Adding data to CARTO
+* Styling point data
+
+---
+
+### Review: levels of measurement
+
+Explain the following levels of measurement: 
+
+* Nominal
+* Ordinal
+* Interval
+* Ratio
+
+---
+
+### Review: Column types
+
+* Numeric
+  + Integers (short or long)
+  + Floating-point numbers (float or double)
+* Text (string)
+* Boolean (true/false)
+* Dates
+
+---
+
+## Structured Query Language (SQL)
+
+* Standard syntax for querying & working with databases; available in the SQL pane in CartoDB
+
+Example statement: 
+
+```sql
+SELECT * FROM accidents
+	WHERE hit_and_run = true
+```
+
+---
+
+## Basic SQL statements
+
+* `CREATE TABLE`: used to create a table in the database.  Parameters must be defined with this statement.
+* `SELECT`: used to subset databases.  Can be used in concert with: 
+* `FROM`: defines the table used to create the subset
+* `WHERE`: specifies conditions that will define the subset
+
+---
+
+## Basic SQL statements
+ 
+* `GROUP BY`: specifies how to display the result (aggregation function); used with `SUM`, `MAX`, `MIN`, `AVG`, `COUNT`, etc.
+* `JOIN`: used to establish relationships between tables in a database
+* `UPDATE`, `INSERT`, `DELETE`: used to modify rows in a database table
+* `ORDER BY`: sort values in a table (`DESC` for descending order)
+
+---
+
+## Example
+
+```sql
+SELECT street_name, COUNT(cartodb_id) as street_count
+	FROM accidents
+	GROUP BY street_name
+	ORDER BY street_count DESC
+```
+
+---
+
+### Dates in CARTO
+
+* Temporal animations are available in CartoDB if an appropriate date column is set; in our dataset, this is `crash_date_time`
+* To convert columns in CARTO: click the column heading, then choose "Change data type..."
+
+---
+
+### Dates and SQL
+
+```sql
+SELECT COUNT(cartodb_id) AS count, 
+       DATE_PART('hour', crash_date_time) AS hour 
+  FROM accidents
+  GROUP BY hour
+  ORDER BY count DESC
+```
+  
+---
+
+## Spatial databases
+
+* Key distinction: a spatial database contains a column that stores the **geometry** of the records in the database
+* In CARTO, this is column is called `the_geom`
+* Analogous to the "Shape" field in ArcGIS
+* `the_geom_webmercator`: feature geometry in projected coordinates, with the meter as the unit of measurement
+
+---
+
+## Spatial SQL
+
+* Extends SQL to perform GIS operations on spatial data in the database
+* CARTO: a full-fledged spatial database with spatial SQL available
+
+---
+
+### Example: buffering points
+
+```sql
+SELECT 
+  cartodb_id, ST_Buffer(the_geom_webmercator, 500) as the_geom_webmercator
+	FROM accidents
+```
+
+---
+
+## GIS functionality in CARTO
+
+* CARTO includes functionality for several common GIS operations with its ANALYSIS options
+* Example: what are the nearest accidents to TCU? 
+
+
+
+
+
+
+
+
+<style>
+
+.reveal section img {
+  background:none; 
+  border:none; 
+  box-shadow:none;
+  }
+  
+</style>
+
