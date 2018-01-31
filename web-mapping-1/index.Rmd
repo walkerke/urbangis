@@ -1,0 +1,110 @@
+---
+title: "Urban mapping for the web"
+author: GEOG 40323
+date: February 6, 2018
+output: 
+  revealjs::revealjs_presentation: 
+    theme: "black"
+    transition: "none"
+    center: TRUE
+    fig_caption: TRUE
+    highlight: "zenburn"
+    
+---
+
+## Urban mapping
+
+* NYC Taxis: A Day in the Life: http://nyctaxi.herokuapp.com/
+* Urban Scratch-Off: http://chriswhong.github.io/urbanscratchoff/
+* A Million Walks in the Park (CARTO): https://carto.com/a-million-walks-in-the-park/
+* Community profiles - NYC Planning: https://communityprofiles.planning.nyc.gov/
+
+---
+
+### Mapping cities
+
+<iframe src="http://urbanstudies.tcu.edu/wp-content/themes/TCU/map/" height = "550" width = "850" frameborder = "0" scrolling = "no"></iframe>
+
+---
+
+### Issues with urban mapping
+
+* Data acquisition
+* Volume of data
+* Styling - especially at multiple zoom levels
+
+---
+
+### OpenStreetMap
+
+* The 'Wikipedia' of map data
+* User-generated and _open_ data and mapping platform
+* Let's take a look: https://www.openstreetmap.org/#map=12/32.7518/-97.3347
+
+---
+
+### Humanitarian OpenStreetMap Team
+
+* Network of volunteers that map crisis zones in under-mapped areas
+* More information: https://hotosm.org/
+
+---
+
+### OpenStreetMap data
+
+* Entire world available as a 47GB (compressed) XML file
+* What if you don't want to set up the data yourself?  
+
+---
+
+## Mapbox
+
+* DC-based startup on the cutting edge of geospatial development
+* Best known for products that allow users to generate tiled maps for the web: TileMill (c. 2011), Mapbox Studio Classic (c. 2014), and now Mapbox Studio
+
+---
+
+## Tiled mapping
+
+* To speed browsing, web maps often display map services as "tiles"
+* Tiles are defined by their **zoom level** and **coordinates**
+
+---
+
+## How tiled mapping systems work
+
+<img src=img/tiled-mapping.png style="width: 700px" />
+
+<span class="footnote">Source: Bing Maps</span>
+
+---
+
+### Innovations in tiled mapping
+
+* The old way: _raster tiles_, or tessellations of PNG images that render based on the user's zoom level and coordinates
+* The new way: _vector tiles_, which contain __vector data__ rather than pre-rendered images
+    * This means that we can style the data in the tiles!
+
+Vector tile example: [Educational Attainment in America](http://personal.tcu.edu/kylewalker/maps/education/index.html#9.93/32.8039/-97.0978)
+    
+---
+
+## Mapbox Studio
+
+* Web-based platform for generating custom vector tiles
+* Gives you access to the OpenStreetMap dataset (!) and allows you to upload your own data
+* Let's check it out!  https://www.mapbox.com/studio
+
+
+
+
+<style>
+
+.reveal section img {
+  background:none; 
+  border:none; 
+  box-shadow:none;
+  }
+  
+</style>
+
