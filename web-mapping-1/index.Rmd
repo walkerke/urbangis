@@ -23,7 +23,9 @@ output:
 
 ### Mapping cities
 
-<iframe src="http://urbanstudies.tcu.edu/wp-content/themes/TCU/map/" height = "550" width = "850" frameborder = "0" scrolling = "no"></iframe>
+<img src=img/fw.PNG style="width: 750px">
+
+Link: http://urbanstudies.tcu.edu/wp-content/themes/TCU/map/
 
 ---
 
