@@ -1,0 +1,247 @@
+---
+title: "Web map design and APIs"
+author: GEOG 40323
+date: February 13, 2018
+output: 
+  revealjs::revealjs_presentation: 
+    theme: "black"
+    transition: "none"
+    center: TRUE
+    fig_caption: TRUE
+    highlight: "zenburn"
+    
+---
+
+## Basic map design principles
+
+* What makes a good map?
+
+---
+
+## Layout
+
+<img src=assets/img/brewer1.png style="width: 650px" />
+
+<span class="footnote">Source: Brewer, *Designing better maps*</span>
+
+---
+
+## Color
+
+<img src=assets/img/schemes.png style="width: 700px" />
+
+<span class="footnote">Source: ColorBrewer</span>
+
+---
+
+## Data classification
+
+<img src=assets/img/poverty.png style="width: 800px" />
+
+---
+
+## Web map design
+
+* Principles of web map design: 
+ * Generalization
+ * Scalability
+ * Responsive design
+
+---
+
+## Generalization
+
+* Important to consider purpose of your map when selecting resolution of your data
+
+<img src=assets/img/general.png style="width: 800px">
+
+
+---
+
+## Generalization
+
+* At small scales, lots of detail can be unnecessary and computationally burdensome 
+* Large feature services can be very slow in web maps
+* When building applications, ask yourself: how much detail do I need?
+
+* In ArcGIS: look for the "Generalization" toolset in the "Cartography" toolbox
+
+---
+
+## Scalability and responsive design
+
+Example: [Educational Attainment in America]()
+
+---
+
+## Enter the "Mapbox Stack"
+
+* Cartographic design: Mapbox Studio
+* Building a website: Mapbox GL JS
+* Geospatial analysis (in the browser!): Turf.js
+
+---
+
+## Components of a web page
+
+* Hypertext Markup Language (HTML): 
+* Cascading Style Sheets (CSS): 
+* JavaScript: language for enabling interactivity on web pages; becoming more and more of a standard
+
+---
+
+## HTML
+
+* Describes the structure of a web page
+* Stored in text files with the `.html` suffix
+* Elements enclosed in **tags**, designated with `<>`
+* DOM: Document Object Model
+
+---
+
+## Sample HTML document
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GEOG 40323</title>
+  </head>
+  <body>
+    <h1>GEOG 40323: Urban & Business GIS</h1>
+    <p>What a great class!</p>
+  </body>
+</html>
+
+```
+
+Let's try it out!
+
+---
+
+## CSS
+
+* Used to style the elements in an HTML document
+* Can be defined in an external "stylesheet," or in the HTML document itself, enclosed in `<style>` tags
+
+---
+
+## Sample CSS
+
+```css
+body {
+  background-color: navy;
+  color: yellow;
+}
+h1 {
+  color: orange;
+  font-family: Courier;
+}
+```
+
+Let's try it out!
+
+---
+
+## JavaScript
+
+* The *lingua franca* for dynamic content on the web
+* Syntax originally derived from Java; however, it is a totally different language
+* Self-study resource: [Code Academy](http://www.codecademy.com/)
+
+---
+
+## JavaScript data types
+
+```javascript
+// Variables (declared with 'var')
+var x = 5;
+
+// Arrays
+var vals = [1, 2, 3, 4]
+
+// Objects
+var course = {
+  num: "GEOG 40323"
+  name: "Urban & Business GIS"
+}
+```
+
+---
+
+## GeoJSON
+
+* JSON: JavaScript Object Notation
+* GeoJSON: additional notation for encoding geographic objects
+* TopoJSON: like GeoJSON, but encodes topology
+
+--- 
+
+## Example GeoJSON
+
+```javascript
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "TCU",
+        "Description": "Our favorite university!"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.36283540725708,
+          32.70969028343882
+        ]
+      }
+    }
+  ]
+}
+```
+
+---
+
+## Web mapping APIs
+
+* API: Application Programming Interface
+* Can be hosted locally on your machine/server, or accessed through a **content delivery network** (CDN)
+
+---
+
+## Web mapping APIs
+
+* ArcGIS API for JavaScript: https://developers.arcgis.com/javascript/
+* Leaflet: http://leafletjs.com/
+* OpenLayers: http://openlayers.org/
+
+---
+
+## Mapbox APIs
+
+* Mapbox GL JS: next-generation library for interacting with styles designed in the new Mapbox Studio
+* Let's take a look: https://www.mapbox.com/mapbox-gl-js/examples/
+
+---
+
+## Turf.js
+
+* Library developed by Mapbox for __in-browser__ spatial analysis
+* Let's take a look: http://turfjs.org/
+
+
+
+
+
+
+<style>
+
+.reveal section img {
+  background:none; 
+  border:none; 
+  box-shadow:none;
+  }
+  
+</style>
+
