@@ -1,0 +1,291 @@
+---
+title: "Spatial statistics and ESDA"
+author: GEOG 40323
+date: February 27, 2018
+output: 
+  revealjs::revealjs_presentation: 
+    theme: "black"
+    transition: "none"
+    center: TRUE
+    fig_caption: TRUE
+    highlight: "zenburn"
+    
+---
+
+## Statistics
+
+* Definition: **the study of the collection, organization, analysis, interpretation, and presentation of data.** 
+* In turn, an understanding of statistics is fundamental to the GIS practitioner
+
+---
+
+## Measures of central tendency
+
+* Mean
+* Median
+* Mode
+
+---
+
+## Mean
+
+The *mean* of a sample ($\overline{x}$) is calculated as follows:
+
+$$\overline{x} = \dfrac{x_1 + x_2 + ... + x_n}{n}$$
+
+where $n$ is the number of elements in the sample.  
+
+---
+
+## Median
+
+* The value that separates the *lower half* of a sample from the *upper half* of a sample
+* If the sample has an odd number of cases, the median is the exact middle value; if the sample has an even number of cases, the median is the mean of the two middle values
+
+---
+
+## Mode
+
+* Most frequent value in a sample
+
+---
+
+## Variance
+
+* A measure of the **spread** of a sample.  The variance is computed as:
+
+$${\sigma}^2 = \dfrac{\sum\limits_{i=1}^{n}(x_i - \overline{x})^2}{n}$$
+
+or, in simpler terms, the average of the squared deviations of the values of a sample from its mean.  
+
+---
+
+## Standard deviation 
+
+* Computed as the square root of the variance; denoted by $\sigma$.  
+* Offers a standardized way to discuss the spread of a distribution.  For example, in a normally distributed sample (more to come on this): 
+    * About 67 percent of the values will be within one standard deviation of the mean
+    * About 95 percent of the values will be within two standard deviations of the mean
+    * About 99 percent of the values will be within three standard deviations of the mean
+
+---
+
+## Z-score
+
+* Often, variables in your analysis will have vastly different measurement scales.  Variables can thus be standardized with the computation of *z-scores*.  
+* A z-score is computed as follows:
+
+$$Z = \dfrac{x - \overline{x}}{\sigma}$$
+
+* In turn, a z-score reflects how many standard deviations an observation is away from the mean.  
+
+---
+
+## Probability 
+
+* **Probability**: the likelihood of the occurrence of an event
+* **Statistical significance**: the probability that an observation/effect is not the result of random chance
+
+---
+
+## The normal distribution 
+
+```{r simple-plot, fig.height=6, fig.width=8, fig.align='center', message=FALSE, echo=FALSE}
+
+set.seed(1234)
+df <- data.frame(cond = factor( rep(c("A","B"), each=200) ), 
+                   values = c(rnorm(200),rnorm(200, mean=.8)))
+
+library(ggplot2)
+
+ggplot(df, aes(x=values)) + 
+    geom_histogram(aes(y=..density..),      # Histogram with density instead of count on y-axis
+                   binwidth=.5,
+                   colour="black", fill="white") +
+    geom_density(alpha=.2, fill="#FF6666")
+
+```
+
+---
+
+## Implications of the distribution of your data
+
+<img src=assets/img/skew.jpg style="width: 700px" />
+
+<span class="footnote">Source: http://www.southalabama.edu/coe/bset/johnson/lectures/lec15_files/image014.jpg</span>
+
+
+---
+
+## Correlation
+
+* Generally speaking, correlation refers to the extent to which two variables covary.  
+* The most popular measure of correlation is Pearson's product-moment correlation coefficient (or Pearson's $r$), which is appropriate for two continuous variables.  
+* $r$ ranges from -1 to 1, where -1 reflects an inverse relationship between two variables, and 1 reflects a positive relationship.  If $r$ = 0, no apparent relationship exists.  
+
+---
+
+## Regression
+
+* **Regression analysis** is used to study the relationship between a response variable $Y$ and a series of explanatory variables $X_1 ... X_n$.  
+* The general formula of a linear regression function is:
+
+$$Y = a + b_{1}X_{1} + ... + b_{n}X_{n} + e$$
+
+* Our job is to estimate the unknown intercept $a$ and the parameters $b_1 ... b_n$.  $e$ refers to the error, or **residuals**, in our equation.  
+
+---
+
+## Spatial statistics
+
+* Statistical methods make a variety of assumptions about your data; for example, regression assumes that your residuals (errors) are **independent and identically distributed** ($i.i.d$).  
+* However, we remember Tobler's First Law of Geography: 
+
+### "Everything is related to everything else, but near things are more related than distant things"
+
+* Given this property of spatial data, we need special methods to account for spatial dependence.  
+
+---
+
+## Exploratory spatial data analysis (ESDA)
+
+* Data analysis techniques used to investigate spatial patterns in a dataset
+* Used to discover unseen features of datasets; often involves visualization
+
+---
+
+## Mean and median center
+
+* Used to identify the central location of a distribution of features
+
+<img src=assets/img/mean-center.png style="width: 600px" />
+
+<span class="footnote">Source: US Census Bureau</span>
+
+---
+
+### Standard deviation ellipse
+
+* Reveals the directional distribution of points; analogous to a standard deviation
+
+<img src=assets/img/std-ellipse.gif style="width: 500px" />
+
+<span class="footnote">Source: Esri</span>
+
+---
+
+### Nearest neighbor 
+
+* Compares the **average** distance from a feature to its neighbor to an **expected** average under conditions of spatial randomness
+
+<img src=assets/img/nn.jpg style="width: 600px" />
+
+<span class="footnote">Source: Keith Clarke, UCSB</span>
+
+---
+
+## Ripley's *K* function
+
+* Checks for clustering/dispersion at multiple scales
+
+<img src=assets/img/ripley.jpg style="width: 600px" />
+
+<span class="footnote">Source: Esri</span>
+
+---
+
+## Spatial autocorrelation
+
+* **Autocorrelation**: the correlation of a variable with itself
+* **Temporal autocorrelation**: similar values in similar time periods
+* **Spatial autocorrelation**: when features tend to have similar values to their neighbors (Tobler's first law of geography!)
+
+---
+
+## Spatial weights matrix
+
+* A **spatial weights matrix** is used to conceptualize spatial relationships between features
+* Types: distance-decay, contiguity, nearest-neighbor
+
+<img src=assets/img/sp-weights.gif style="width: 500px" />
+
+<span class="footnote">Source: [biosolutions.us](http://www.bisolutions.us/A-Brief-Introduction-to-Spatial-Regression.php)</span>
+
+---
+
+## Global measures of autocorrelation
+
+* Statistics designed to detect the presence of spatial autocorrelation in a dataset
+* Commonly used: Moran's *I*, Geary's *C*
+
+---
+
+## Moran's *I*
+
+* Most commonly-used global autocorrelation statistic
+* Values range from -1 to 1; negative values indicate uniformity, positive values indicate clustering
+
+<img src=assets/img/moransi.png style="width: 430px" />
+
+---
+
+## Local measures of spatial autocorrelation
+
+* *Local statistic*: statistic in a spatial dataset that varies from place to place
+* Whereas global measures of spatial autocorrelation can describe general characteristics of a dataset, local measures can illustrate **where** clustering is found in your data
+
+---
+
+## Getis-Ord $G_i$
+
+* For a location $i$, the local statistic $G_i$ is computed as:
+
+$$G_{i}(d) = \dfrac{\sum\limits_{j}w_{ij}(d)x_j}{\sum\limits_{j=1}^{n}x_j} \text{ for all }i \neq j$$
+
+* In simpler terms, $G_i$ reflects the relationship between the values of a neighborhood and the overall values of a study area.  High values reflect a clustering of high values; low values reflect a clustering of low values.  
+* The $G_i^{*}$ statistic is similar, but includes the value for location $i$ in the neighborhood calculation.  
+
+---
+
+### Local indicators of spatial association (LISA)
+
+* Local form of the Moran's *I*; used to identify clusters and outliers in a dataset
+
+<img src=assets/img/cc.jpg style="width: 600px" />
+
+---
+
+## Spatial regression
+
+* Spatial dependence in your data violates some basic assumptions of the regression model
+* Alternative: **spatial regression**
+ * *Spatial lag model*: The average neighborhood value of the response variable modeled as an explanatory variable
+ * *Spatial error model*: Used when residuals (errors) exhibit spatial autocorrelation; accounts for spatial autocorrelation in the error term  
+
+---
+
+### Spatial statistics in ArcGIS
+
+<img src=assets/img/arcgis.png style="width: 425px" />
+
+---
+
+### Other options for doing spatial analysis
+
+<img src=assets/img/packages.png style="width: 700px" />
+
+
+
+
+
+
+<style>
+
+.reveal section img {
+  background:none; 
+  border:none; 
+  box-shadow:none;
+  }
+  
+</style>
+
