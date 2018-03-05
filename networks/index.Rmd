@@ -1,0 +1,249 @@
+---
+title: "Network Analysis"
+author: GEOG 40323
+date: March 6, 2018
+output: 
+  revealjs::revealjs_presentation: 
+    theme: "black"
+    transition: "none"
+    center: TRUE
+    fig_caption: TRUE
+    highlight: "zenburn"
+    
+---
+
+## Distance in GIS
+
+* Review: how can distance be measured in a GIS context?
+
+---
+
+## Types of distance in GIS
+
+* Euclidean (planar) distance
+* Manhattan distance
+* Geodesic distance
+* Network distance
+
+---
+
+## Euclidean vs. Manhattan distance
+
+<img src=assets/img/distance.png style="width: 500px" />
+
+<span class="footnote">Source: Wikipedia</span>
+
+---
+
+## Geodesic distance
+
+<img src=assets/img/geodesic.png style="width: 700px" />
+
+<span class="footnote">Source: Esri</span>
+
+---
+
+### Distance in urban/business analysis
+
+<img src=assets/img/sanfran.jpg style="width: 600px" />
+
+---
+
+## Network distance
+
+* Core principle: determination of shortest distance between two points along a network
+* Based on topological relationships between features
+
+---
+
+### 'Cost' and network analysis
+
+<img src=assets/img/cost.gif style="width: 530px" />
+
+<span class="footnote">Source: Bolstad, *GIS Fundamentals*</span>
+
+---
+
+### The Dijkstra algorithm
+
+<img src=assets/img/dijkstra.gif style="width: 600px" />
+
+<span class="footnote">Source: Bolstad, *GIS Fundamentals*</span>
+
+---
+
+## Linear referencing
+
+* A type of alternative datum for determining relative locations
+* **Linear referencing system**: features stored with reference to line features (e.g. I-35W, mile 15.6); can be used instead of x, y coordinates
+
+---
+
+## Topology
+
+<img src=assets/img/topology.png style="width: 800px" />
+
+<span class="footnote">Source: Bolstad, *GIS Fundamentals*</span>
+
+---
+
+### Other types of network analysis
+
+* Geometric networks
+
+<img src=assets/img/geom.jpg style="width: 600px" />
+
+<span class="footnote">Source: Esri</span>
+
+---
+
+### Components of a road network
+
+* A linear reference (generally, a streets dataset)
+* Some way to calculate a cost attribute along the network, e.g.; 
+ * Distance: length of line segment
+ * Time: impedance to travel
+* Information about characteristics of a road network
+
+---
+
+### Time as a cost attribute
+
+* How to calculate?  Must have some ancillary information about travel speeds along roads
+* Example: speed limit information; traffic profiles
+* Basic formula: $time = rate / distance$
+* Gets more complicated with traffic
+
+---
+
+## Traffic in network analysis
+
+<img src=assets/img/traffic-profile.jpg style="width: 700px" />
+
+<span class="footnote">Source: Esri</span>
+
+---
+
+## Traffic in ArcGIS
+
+* Tutorial!
+
+* Server URL: http://traffic.arcgis.com/arcgis
+
+<!-- Use 'Ready to use services' in ArcCatalog window in ArcMap -->
+
+---
+
+## Network analysis and logistics
+
+[Video on UPS's ORION system](https://www.cnbc.com/2016/11/23/how-ups-plans-to-meet-the-2016-holiday-gift-delivery-rush.html)
+
+<!-- Case study; how does UPS use GIS?
+
+Possibilities: 
+
+http://www.youtube.com/watch?v=ZHqgpVsUfhI
+
+http://www.bloomberg.com/video/orion-the-algorithm-that-makes-ups-tick-M6mUYN7wRsO~Af~O5BFyKQ.html
+
+http://www.bloomberg.com/video/forget-drones-this-is-the-future-of-delivery-6_gzcV5RQ6uU2SnT8zPO8g.html
+
+-->
+
+---
+
+## Applications of network analysis
+
+* Vehicle routing
+* Service area (drive-time) analysis
+* Closest facility analysis
+* Location-allocation modeling
+* Advanced business analytics
+
+---
+
+
+
+## Vehicle routing
+
+<img src=assets/img/tcusmu.jpg style="width: 800px" />
+
+---
+
+## Service area analysis
+
+* Tutorial!
+
+<!-- Use 'Ready to use services' in ArcCatalog window in ArcMap -->
+
+---
+
+## Closest facility analysis
+
+<img src=assets/img/closestf.png style="width: 600px" />
+
+---
+
+### Location-allocation modeling
+
+<img src=assets/img/loc-all.png style="width: 650px" />
+
+<span class="footnote">Source: Esri</span>
+
+---
+
+### Gravity modeling
+
+In a GIS context, a gravity model can be specified as:
+
+$$P_{ij} = \dfrac{W_i/D_{ij}^\alpha}{\sum_{i=1}^{n}(W_i/D_{ij}^\alpha)}$$
+
+Where:
+
+$P_{ij}$ = the probability of customer $j$ shopping at store $i$;
+
+$W_i$ = some measure of the attractiveness of each store $i$;
+
+$D_{ij}$ = the distance from customer $j$ to store $i$; 
+
+$\alpha$ = a distance-decay parameter
+
+---
+
+## Huff model
+
+* Employs principles of gravity modeling to forecast customer demand, sales potential
+* Implemented in Esri's Business Analyst for Desktop
+
+<img src=assets/img/help.png style="width: 700px" />
+
+<span class="footnote">[Image source](http://www.arcgis.com/home/item.html?id=f4769668fc3f486a992955ce55caca18)</span>
+
+---
+
+## Network analysis beyond ArcGIS
+
+* pgRouting: Adds routing functionality to PostgreSQL/PostGIS; can be integrated with QGIS
+* Employs OpenStreetMap data
+
+---
+
+## Want to do more?  
+
+[Check out the suite of Esri Network Analyst tutorials here:](http://pro.arcgis.com/en/pro-app/help/analysis/networks/what-is-network-analyst-.htm)
+
+
+
+
+
+
+<style>
+
+.reveal section img {
+  background:none; 
+  border:none; 
+  box-shadow:none;
+  }
+  
+</style>
+
