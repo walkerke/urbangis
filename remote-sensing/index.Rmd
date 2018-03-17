@@ -1,0 +1,195 @@
+---
+title: "Remote sensing"
+author: GEOG 40323
+date: March 20, 2018
+output: 
+  revealjs::revealjs_presentation: 
+    theme: "black"
+    transition: "none"
+    center: TRUE
+    fig_caption: TRUE
+    highlight: "zenburn"
+    
+---
+
+## Raster data: a brief review
+
+* Used to represent **continuous** phenomena
+* Each **grid cell** or **pixel** has a specific value
+
+<img src=assets/img/raster1.png style="width: 700px">
+
+---
+
+## Types of raster data
+
+<img src=assets/img/raster2.png style="width: 700px">
+
+---
+
+## Raster data resolution
+
+* Data with a smaller **cell dimension** have a higher **resolution**
+
+<img src=assets/img/raster3.png style="width: 700px">
+
+---
+
+## Remote sensing and photogrammetry
+
+* Remote sensing: collection of aerial and satellite images for use within a GIS
+* Photogrammetry: the science of measuring geometry from images
+
+
+---
+
+## Electromagnetic energy
+
+* Properties: *wavelength*, *frequency*, and *amplitude*
+
+<img src=assets/img/emsp1.gif style="width: 700px">
+
+<span class="footnote">Source: National University of Singapore</span>
+
+<!-- Discuss what it is, why it is significant for remote sensing -->
+
+---
+
+## Resolution in remote sensing
+
+* Relevant types: 
+ * **Spatial** resolution
+ * **Temporal** resolution
+ * **Spectral** resolution
+ * **Radiometric** resolution
+ 
+
+---
+
+## Data collection: satellites
+
+<img src=assets/img/geo-eye.jpg style="width: 700px">
+
+<span class="footnote">Source: Digital Globe</span>
+
+---
+
+## Data collection: satellites
+
+<img src=assets/img/orbit.png style="width: 700px">
+
+<span class="footnote">Source: Penn State</span>
+
+---
+
+## Types of satellites
+
+* Landsat
+* GeoEye/Digital Globe
+
+---
+
+## Data collection: airplanes
+
+<img src=assets/img/airplane.jpg style="width: 700px">
+
+<span class="footnote">Source: Penn State</span>
+
+---
+
+## Remotely sensed data models
+
+* Raster data (imagery)
+* Point cloud data (LIDAR)
+
+---
+
+## Imagery in a GIS
+
+<img src=assets/img/bands.gif style="width: 700px">
+
+<span class="footnote">Source: Esri</span>
+
+* Data types: GeoTIFF, GeoJPEG, ECW, GRID, IMG, SID
+
+---
+
+## Mosaicing
+
+* Process of combining multiple rasters into a single dataset
+
+<img src=assets/img/mosaic.gif style="width: 700px">
+
+<span class="footnote">Source: Esri</span>
+
+---
+
+## Imagery operations
+
+* Georeferencing
+* Orthorectification
+* Spectral enhancement
+
+---
+
+## Normalized Difference Vegetation Index
+
+<img src=assets/img/nvdi.png style="width: 700px">
+
+<span class="footnote">Source: Wikimedia Commons</span>
+
+---
+
+## Band manipulation
+
+<img src=assets/img/color.png style="width: 600px">
+
+<span class="footnote">[Source](http://gdsc.nlr.nl/gdsc/en/information/earth_observation/band_combinations_)</span>
+
+---
+
+## Image classification
+
+* Types: **supervised** and **unsupervised** classification
+
+<img src=assets/img/class.jpg style="width: 700px">
+
+<span class="footnote">Source: USDA</span>
+
+---
+
+## Change detection
+
+<img src=assets/img/change.jpg style="width: 800px">
+
+<span class="footnote">Source: Earthzine.org</span>
+
+---
+
+## Feature extraction
+
+<img src=assets/img/feature.jpg style="width: 700px">
+
+<span class="footnote">Source: aeroterra.com</span>
+
+---
+
+## Urban applications of remote sensing
+
+* [Urban change from satellite imagery: Time Magazine](http://world.time.com/timelapse/)
+
+
+
+
+
+
+<style>
+
+.reveal section img {
+  background:none; 
+  border:none; 
+  box-shadow:none;
+  }
+  
+</style>
+
