@@ -1,0 +1,201 @@
+---
+title: "3D Urban Modeling"
+author: GEOG 40323
+date: April 3, 2018
+output: 
+  revealjs::revealjs_presentation: 
+    theme: "black"
+    transition: "none"
+    center: TRUE
+    fig_caption: TRUE
+    highlight: "zenburn"
+    
+---
+
+## Three-dimensional coordinate systems
+
+* Z-coordinates: vertical measurements (elevation), or measurement of magnitude
+
+<img src=assets/img/coords.gif style="width: 700px">
+
+
+---
+
+## Vertical datums
+
+* Reference for measuring heights/elevation
+* Common vertical datums:
+ * Mean sea level
+ * The geoid (orthometric heights)
+ 
+<img src=assets/img/heights.gif style="width: 400px">
+
+
+---
+
+### Digital elevation models (DEMs)
+
+* Raster representation of a terrain's (commonly the Earth's) surface
+
+<img src=assets/img/dem.png style="width: 700px">
+
+---
+
+## Applications of DEMs
+
+* Shaded relief mapping
+* Surface analysis and modeling
+* Hydrologic modeling
+
+---
+
+## Triangulated irregular networks (TINs)
+
+<img src=assets/img/tin.png style="width: 700px">
+
+<span class="footnote">Source: qgis.org</span>
+
+---
+
+## LiDAR
+
+* Light Detection and Ranging
+* Laser pointed at Earth; returned light analyzed to provide information about elevation, vegetation, etc.
+
+<img src=assets/img/lidar1.png style="width: 700px">
+
+
+---
+
+## How LiDAR works
+
+<img src=assets/img/lidar2.jpg style="width: 700px">
+
+<span class="footnote">Source: Penn State</span>
+
+---
+
+## How LiDAR works
+
+* LiDAR systems can record different 'returns' with each pulse that reflect different features
+
+<img src=assets/img/lidar3.jpg style="width: 600px">
+
+<span class="footnote">Source: Penn State</span>
+
+---
+
+## LiDAR examples
+
+* The Ballpark at Arlington
+
+<img src=assets/img/ballpark.png style="width: 700px">
+
+<span class="footnote">Source: TNRIS</span>
+
+---
+
+## LiDAR examples
+
+* Six Flags over Texas
+
+<img src=assets/img/sixflags.png style="width: 700px">
+
+<span class="footnote">Source: TNRIS</span>
+
+---
+
+## LiDAR data formats
+
+* Historically, LiDAR stored in ASCII text files
+* Industry standard: LAS files (binary format)
+* LiDAR in ArcGIS: the LAS dataset
+
+---
+
+### Tech advances: LiDAR and UAVs
+
+<iframe width="800" height="600" src="http://www.youtube.com/embed/aIxYt7DkK5A" frameborder="0" allowfullscreen></iframe>
+
+---
+
+## 3D GIS concepts
+
+* **Extrusion**: vertical stretching of a 2D shape for display in 3D, based on some attribute or value
+
+* **Base heights**: how elevation/height values are defined within a three-dimensional GIS view
+
+* **Drape**: display of a layer in three dimensions given the defined base heights
+
+---
+
+## Building footprints
+
+* Geographic data representing outline of a building
+* Example on Google Maps
+
+---
+
+### Buildings in 3D
+
+* Building footprints can be extruded based on their recorded heights
+* **Multipatch polygons**: 3D features with multiple shapes encoded
+
+<img src=assets/img/multipatch.png style="width: 600px">
+
+<span class="footnote">Source: aubreyrhea.net</span>
+
+---
+
+## 3D in ArcGIS: 3D Analyst
+
+<img src=assets/img/threed.png style="width: 850px">
+
+<span class="footnote">Source: Esri</span>
+
+---
+
+## 3D in ArcGIS
+
+* ArcScene: Program for visualization and modeling in three dimensions (accompanies ArcMap)
+* ArcGIS Pro: Native 3D visualization (though buggy)
+* ArcGIS Earth: Standalone application for 3D exploration000
+* ArcGIS Online Scene Viewer: view 3D scenes on the web
+
+---
+
+## 3D GIS in urban planning
+
+<iframe frameborder="0" scrolling="no" width="800" height="450" src="http://video.arcgis.com/iframe/2133/000000/width/800/0/00:00:00"></iframe>
+
+---
+
+## 3D cities: CityEngine
+
+* Esri program for sophisticated modeling in 3D
+* Be sure that your computer can handle it!
+* [Example online city scene from CityEngine](http://www.arcgis.com/apps/CEWebViewer/viewer.html?3dWebScene=50856be2102a46868372319f3852bdc7)
+
+---
+
+## 3D on the web
+
+* WebGL: framework that allows for 3D displays in web browsers without installing additional software
+* Three.js: JavaScript library for 3D in the browser
+* Examples: http://makc.github.io/three.js/map2globe/demo.html; http://members.chello.at/~graser/Qgis2threejs/ (QGIS)
+
+
+
+
+
+
+<style>
+
+.reveal section img {
+  background:none; 
+  border:none; 
+  box-shadow:none;
+  }
+  
+</style>
+
