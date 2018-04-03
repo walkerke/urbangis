@@ -157,10 +157,9 @@ output:
 
 ## 3D in ArcGIS
 
-* ArcScene: Program for visualization and modeling in three dimensions (accompanies ArcMap)
-* ArcGIS Pro: Native 3D visualization (though buggy)
-* ArcGIS Earth: Standalone application for 3D exploration000
-* ArcGIS Online Scene Viewer: view 3D scenes on the web
+* ArcGIS Pro: Native 3D visualization 
+
+Let's try it out!
 
 ---
 
