@@ -163,12 +163,6 @@ Let's try it out!
 
 ---
 
-## 3D GIS in urban planning
-
-<iframe frameborder="0" scrolling="no" width="800" height="450" src="http://video.arcgis.com/iframe/2133/000000/width/800/0/00:00:00"></iframe>
-
----
-
 ## 3D cities: CityEngine
 
 * Esri program for sophisticated modeling in 3D
@@ -177,11 +171,18 @@ Let's try it out!
 
 ---
 
-## 3D on the web
+## 3D cities: CityEngine
 
-* WebGL: framework that allows for 3D displays in web browsers without installing additional software
-* Three.js: JavaScript library for 3D in the browser
-* Examples: http://makc.github.io/three.js/map2globe/demo.html; http://members.chello.at/~graser/Qgis2threejs/ (QGIS)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sOY3LY688QI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+---
+
+## Urban 3D applications
+
+* [3D buildings in Mapbox Studio - Demo](https://www.mapbox.com/studio)
+* [CityZenith for urban planning](https://vimeo.com/242228276)
+
+
 
 
 
