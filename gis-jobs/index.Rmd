@@ -1,7 +1,7 @@
 ---
 title: "The GIS Job Market"
 author: GEOG 40323
-date: April 19, 2016
+date: April 24, 2018
 output: 
   revealjs::revealjs_presentation: 
     theme: "black"
@@ -14,27 +14,29 @@ output:
 
 ## Upcoming dates
 
-* April 21: Lab 8 assigned (due April 28)
-* April 26: project time; I'm available to print posters
-* May 2: I'm available to print posters
+* Lab 8 due __Wednesday, May 2__
+* Next week: project time; I'm available to print posters and for last-minute meetings
+* May 7: I'm available to print posters and for extra-last-minute meetings
     * Final papers due at 11:59 pm
-* May 3: Poster presentation session from 11:30-1:00 in Rees-Jones 112
-    * Posters due May 3 - get them done early!
+* May 8: Poster presentation session at 11:00 in Rees-Jones 211
+    * Posters due May 8 - get them done early!
 
 ---
 
 ## Posters
 
 * Templates available at http://cis.tcu.edu/default.asp?f=media-production&sf=graphics-production&p=research-posters
-* For inspiration, check the examples in the lab downstairs
+* For inspiration, check the examples in the Geography office
+* Guest speaker: Dr. Ashley Coles
 
 ---
 
 ## Presentations
 
-* To commence at 11:30am in Rees-Jones 112
-* You will stand by your posters for 20 minutes; view your colleagues' presentations the rest of the time
-* Four 20-minute sessions; 10 minute break at 12:10 to switch
+* To commence May 8 at 11:00am in Rees-Jones 211
+* You will stand by your posters for 15 minutes; view your colleagues' presentations the rest of the time
+* Five 15-minute sessions; break in the middle
+* __YOU MUST ATTEND THE ENTIRE PRESENTATION SESSION TO RECEIVE CREDIT FOR YOUR POSTERS__
 
 ---
 
@@ -48,13 +50,9 @@ output:
     * Results and deliverables
     * Conclusion and reflections
 
-
-
 ---
 
-## The state of the GIS field
-
-<img src=assets/img/market.png style="width: 700px">
+## The GIS job market
 
 ---
 
@@ -68,11 +66,11 @@ output:
 
 Examples: 
 
-* [Senior Planner, GIS & Research, City of Fort Worth](http://www.indeed.com/viewjob?jk=a6022a6008407c76&qd=I2j7AToAjJ5zNIEXXC-b31pdQoS7Su7RBUeDL1UDx8RTogDOrx_sOx2a41VGOIUm5UKZQmxeciWhDvjwCyZ5Q-oCFLMibOCEabUahnuewCk&atk=1agj5lbtfa42q9oq&utm_source=publisher&utm_medium=organic_listings&utm_campaign=affiliate)
-* [GIS Technician, NCTCOG](https://nctcog.silkroad.com/epostings/index.cfm?fuseaction=app.dspjob&jobid=537&company_id=16153&version=1&jobBoardId=1112)
-* [Retail GIS Analyst, The Weitzman Group, Dallas](http://www.indeed.com/viewjob?cmp=The-Weitzman-Group%2FCencor-Realty-Services&t=Retail+GIS+Analyst&jk=7c57c7fa969c8232&q=gis+analyst)
+* [GIS Research Analyst, JLL](https://jll.wd1.myworkdayjobs.com/en-US/jllcareers/job/Atlanta-GA/GIS-Research-Analyst_REQ3804?source=APPLICANT_SOURCE-6-41&codes=D_Indeed)
+* [Real Estate Analyst, Panda Restaurant Group](https://pandarg.referrals.selectminds.com/jobs/real-estate-analyst-22845)
+* [Consumer Analytics Lead (GIS), Harley Davidson](https://jobs.harley-davidson.com/job/Milwaukee-Consumer-Analytics-Lead-%28GIS%29-WI-53201/470024800/?feedId=4&utm_source=Indeed)
 
-Others on the jobs board; we could go on and on!
+Tutorial: how to search for jobs on Indeed.com
 
 ---
 
@@ -80,7 +78,7 @@ Others on the jobs board; we could go on and on!
 
 * Operating GIS software and pushing buttons in ArcGIS **is not** a career
 * However, the ability to **work with geospatial datasets** and **apply geographic analytical techniques** is in high demand!
-* Emerging field: _data science_
+* Emerging field you need to be aware of: _data science_
 
 ---
 
@@ -92,7 +90,6 @@ My advice:
 * Internships
 * Independent training and self-study
 * Marketing yourself (website, e-portfolio, LinkedIn)
-* Staying up to date with the field (blogs, Twitter)
 
 ---
 
@@ -109,6 +106,8 @@ My advice:
 * [Article from *The Chronicle* on "The Employment Mismatch"](https://chronicle.com/article/The-Employment-Mismatch/137625/#id=overview)
 * Key quote: "However, it's fundamental abilities that he says recent graduates lack, like how to analyze large amounts of data or construct a cogent argument. **"It's not a matter of technical skill,"** he says, **"but of knowing how to think."** "
 
+TALK TO TERRENCE HOOD AND THE CAREER CENTER!
+
 ---
 
 ### Independent training and self-study
@@ -117,6 +116,7 @@ My advice:
 * Options: 
     * Online open courseware (e.g. from [Penn State's online MGIS program](http://open.ems.psu.edu/courseware))
     * MOOCs (e.g. [Coursera](https://www.coursera.org/))
+    * DataCamp: http://www.datacamp.com 
 
 
 ---
@@ -126,21 +126,6 @@ My advice:
 * Ask yourselves: if an employer were to Google me, what would they find?  
 * Options: website, blog/e-portfolio, LinkedIn
 * Good options: Wordpress, Weebly, Wix
-
----
-
-### Staying up to date with the field
-
-Recommended blogs/Twitter accounts to follow: 
-
-* James Fee: [Spatially Adjusted](http://www.spatiallyadjusted.com/), https://twitter.com/cageyjames
-* Brian Timoney: [MapBrief](http://mapbrief.com/), https://twitter.com/briantimoney
-* Bill Dollins: [geoMusings](http://blog.geomusings.com/), https://twitter.com/billdollins
-* Adena Schutzberg: [Ignite Education](http://blog.abs-cg.com/), https://twitter.com/adenas
-* Hashtags: #gistribe, #geowebchat
-
-
-
 
 
 
